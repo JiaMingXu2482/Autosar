@@ -1,0 +1,246 @@
+/**********************************************************************************************************************
+ *  FILE DESCRIPTION
+ *  -------------------------------------------------------------------------------------------------------------------
+ *          File:  HIL_Controller.c
+ *        Config:  s32k_dvc.dpa
+ *     SW-C Type:  HIL_Controller
+ *
+ *     Generator:  MICROSAR RTE Generator Version 4.19.0
+ *                 RTE Core Version 1.19.0
+ *       License:  CBD1800257
+ *
+ *   Description:  C-Code implementation template for SW-C <HIL_Controller>
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of version logging area >>                DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+/* PRQA S 0777, 0779 EOF */ /* MD_MSR_5.1_777, MD_MSR_5.1_779 */
+/* PRQA S 0857 EOF */ /* MD_MSR_1.1_857 */
+/* PRQA S 0614 EOF */ /* MD_Rte_TestCode */
+
+/* PRQA S 3109 EOF */ /* MD_Rte_TestCode */
+/* PRQA S 3112 EOF */ /* MD_Rte_TestCode */
+/* PRQA S 3197 EOF */ /* MD_Rte_TestCode */
+/* PRQA S 3198 EOF */ /* MD_Rte_TestCode */
+/* PRQA S 3199 EOF */ /* MD_Rte_TestCode */
+/* PRQA S 3201 EOF */ /* MD_Rte_TestCode */
+/* PRQA S 3203 EOF */ /* MD_Rte_TestCode */
+/* PRQA S 3205 EOF */ /* MD_Rte_TestCode */
+/* PRQA S 3206 EOF */ /* MD_Rte_TestCode */
+/* PRQA S 3218 EOF */ /* MD_Rte_TestCode */
+/* PRQA S 3229 EOF */ /* MD_Rte_TestCode */
+/* PRQA S 2002 EOF */ /* MD_Rte_TestCode */
+/* PRQA S 3334 EOF */ /* MD_Rte_TestCode */
+/* PRQA S 3417 EOF */ /* MD_Rte_TestCode */
+/* PRQA S 3426 EOF */ /* MD_Rte_TestCode */
+/* PRQA S 3453 EOF */ /* MD_Rte_TestCode */
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of version logging area >>                  DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+#include "Rte_HIL_Controller.h" /* PRQA S 0857 */ /* MD_MSR_1.1_857 */
+#include "TSC_HIL_Controller.h"
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+#include "string.h"
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ *
+ * Used AUTOSAR Data Types
+ *
+ **********************************************************************************************************************
+ *
+ * Primitive Types:
+ * ================
+ * sint16: Integer in interval [-32768...32767] (standard type)
+ * uint16: Integer in interval [0...65535] (standard type)
+ * uint8: Integer in interval [0...255] (standard type)
+ *
+ *********************************************************************************************************************/
+
+
+#define HIL_Controller_START_SEC_CODE
+#include "HIL_Controller_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_19.1 */
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: Run_HIL_PI_10ms
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered on TimingEvent every 10ms
+ *
+ **********************************************************************************************************************
+ *
+ * Input Interfaces:
+ * =================
+ *   Explicit S/R API:
+ *   -----------------
+ *   Std_ReturnType Rte_Read_R_HIL_Vx_Cnt(uint16 *data)
+ *   Std_ReturnType Rte_Read_R_HIL_Vx_Vx(sint16 *data)
+ *
+ * Output Interfaces:
+ * ==================
+ *   Explicit S/R API:
+ *   -----------------
+ *   Std_ReturnType Rte_Write_P_HIL_Cmd_Fault(uint8 data)
+ *   Std_ReturnType Rte_Write_P_HIL_Cmd_Heartbeat(uint8 data)
+ *   Std_ReturnType Rte_Write_P_HIL_Cmd_Pcon(uint16 data)
+ *   Std_ReturnType Rte_Write_P_HIL_Cmd_Throttle(uint16 data)
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: Run_HIL_PI_10ms_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(void, HIL_Controller_CODE) HIL_Controller_Run10ms(void) /* PRQA S 0850 */ /* MD_MSR_19.8 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: HIL_Controller_Run10ms
+ *********************************************************************************************************************/
+
+  Std_ReturnType fct_status;
+  boolean fct_error = 0;
+
+  uint16 Read_R_HIL_Vx_Cnt;
+  sint16 Read_R_HIL_Vx_Vx;
+
+  /*************************************************
+  * Direct Function Accesses
+  *************************************************/
+
+  fct_status = TSC_HIL_Controller_Rte_Read_R_HIL_Vx_Cnt(&Read_R_HIL_Vx_Cnt);
+  switch (fct_status)
+  {
+    case RTE_E_OK:
+      fct_error = 0;
+      break;
+    case RTE_E_UNCONNECTED:
+      fct_error = 1;
+      break;
+    case RTE_E_NEVER_RECEIVED:
+      fct_error = 1;
+      break;
+    case RTE_E_INVALID:
+      fct_error = 1;
+      break;
+    case RTE_E_MAX_AGE_EXCEEDED:
+      fct_error = 1;
+      break;
+  }
+
+  fct_status = TSC_HIL_Controller_Rte_Read_R_HIL_Vx_Vx(&Read_R_HIL_Vx_Vx);
+  switch (fct_status)
+  {
+    case RTE_E_OK:
+      fct_error = 0;
+      break;
+    case RTE_E_UNCONNECTED:
+      fct_error = 1;
+      break;
+    case RTE_E_NEVER_RECEIVED:
+      fct_error = 1;
+      break;
+    case RTE_E_INVALID:
+      fct_error = 1;
+      break;
+    case RTE_E_MAX_AGE_EXCEEDED:
+      fct_error = 1;
+      break;
+  }
+
+  fct_status = TSC_HIL_Controller_Rte_Write_P_HIL_Cmd_Fault(Rte_InitValue_P_HIL_Cmd_Fault);
+  switch (fct_status)
+  {
+    case RTE_E_OK:
+      fct_error = 0;
+      break;
+  }
+
+  fct_status = TSC_HIL_Controller_Rte_Write_P_HIL_Cmd_Heartbeat(Rte_InitValue_P_HIL_Cmd_Heartbeat);
+  switch (fct_status)
+  {
+    case RTE_E_OK:
+      fct_error = 0;
+      break;
+  }
+
+  fct_status = TSC_HIL_Controller_Rte_Write_P_HIL_Cmd_Pcon(Rte_InitValue_P_HIL_Cmd_Pcon);
+  switch (fct_status)
+  {
+    case RTE_E_OK:
+      fct_error = 0;
+      break;
+  }
+
+  fct_status = TSC_HIL_Controller_Rte_Write_P_HIL_Cmd_Throttle(Rte_InitValue_P_HIL_Cmd_Throttle);
+  switch (fct_status)
+  {
+    case RTE_E_OK:
+      fct_error = 0;
+      break;
+  }
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+
+#define HIL_Controller_STOP_SEC_CODE
+#include "HIL_Controller_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_19.1 */
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of function definition area >>            DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of function definition area >>              DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of removed code area >>                   DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of removed code area >>                     DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+/**********************************************************************************************************************
+ MISRA 2004 violations and justifications
+ *********************************************************************************************************************/
+
+/* module specific MISRA deviations:
+   MD_Rte_TestCode:
+     Reason:     This justification is used within the generated test code by the Rte Analyzer.
+     Risk:       No functional risk.
+     Prevention: Not required.
+
+*/

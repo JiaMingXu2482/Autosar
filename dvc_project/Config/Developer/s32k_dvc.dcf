@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DCF ARSCHEMA="431_DEV">
+	<Version>1.0</Version>
+	<PROFILESETTINGS>ProfileSettings.xml</PROFILESETTINGS>
+	<ADMINDATATEMPLATES>AdminDataTemplates.xml</ADMINDATATEMPLATES>
+	<PROJECTASSISTANT>..\..\s32k_dvc.dpa</PROJECTASSISTANT>
+	<FILEREF>
+		<ARXML>Packages.arxml</ARXML>
+	</FILEREF>
+	<FILEREF>
+		<ARXML>DataTypes.arxml</ARXML>
+	</FILEREF>
+	<FILEREF>
+		<ARXML>PortInterfaces.arxml</ARXML>
+	</FILEREF>
+	<FILEREF>
+		<ARXML>ECUProjects\s32k_dvc.arxml</ARXML>
+		<DVG>ECUProjects\s32k_dvc.dvg</DVG>
+	</FILEREF>
+	<FILEREF>
+		<ARXML>ComponentTypes\HIL_Controller.arxml</ARXML>
+		<DVG>ComponentTypes\HIL_Controller.dvg</DVG>
+	</FILEREF>
+</DCF>

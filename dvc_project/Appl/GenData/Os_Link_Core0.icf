@@ -1,0 +1,1342 @@
+/**********************************************************************************************************************
+ *  COPYRIGHT
+ *  -------------------------------------------------------------------------------------------------------------------
+ *  \verbatim
+ *
+ *                 This software is copyright protected and proprietary to Vector Informatik GmbH.
+ *                 Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+ *                 All other rights remain with Vector Informatik GmbH.
+ *  \endverbatim
+ *  -------------------------------------------------------------------------------------------------------------------
+ *  LICENSE
+ *  -------------------------------------------------------------------------------------------------------------------
+ *            Module: Os
+ *           Program: MSR_Vector_SLP4
+ *          Customer: Harman International (China) Holdings Co., Ltd.
+ *       Expiry Date: Not restricted
+ *  Ordered Derivat.: FS32K148UAT0VLQR
+ *    License Scope : The usage is restricted to CBD1800257_D01
+ *
+ *  -------------------------------------------------------------------------------------------------------------------
+ *  FILE DESCRIPTION
+ *  -------------------------------------------------------------------------------------------------------------------
+ *              File: Os_Link_Core0.icf
+ *   Generation Time: 2026-10-16 21:04:50
+ *           Project: s32k_dvc - Version 1.0
+ *          Delivery: CBD1800257_D01
+ *      Tool Version: DaVinci Configurator  5.18.65 SP5
+ *
+ *
+ *********************************************************************************************************************/
+
+/**********************************************************************************************************************
+ *  CODE SECTIONS
+ *********************************************************************************************************************/
+
+#if defined ( OS_LINK_INTVEC_CODE )
+block OS_INTVEC_CORE0_CODE_BLOCK with alignment = 128 { section .OS_INTVEC_CORE0_CODE },
+#endif
+
+#if defined ( OS_LINK_EXCVEC_CODE )
+block OS_EXCVEC_CORE0_CODE_BLOCK { section .OS_EXCVEC_CORE0_CODE },
+#endif
+
+#if defined ( OS_LINK_CALLOUT_CODE )
+block OS_OsTask_10ms_CODE_BLOCK with alignment = 32 { section .OS_OsTask_10ms_CODE },
+block OS_OsTask_BSW_CODE_BLOCK with alignment = 32 { section .OS_OsTask_BSW_CODE },
+block OS_OsTask_Init_CODE_BLOCK with alignment = 32 { section .OS_OsTask_Init_CODE },
+#endif
+
+#ifdef OS_LINK_INTVEC_CODE
+# undef OS_LINK_INTVEC_CODE
+#endif
+
+#ifdef OS_LINK_EXCVEC_CODE
+# undef OS_LINK_EXCVEC_CODE
+#endif
+
+#ifdef OS_LINK_CALLOUT_CODE
+# undef OS_LINK_CALLOUT_CODE
+#endif
+
+
+/**********************************************************************************************************************
+ *  CONST SECTIONS
+ *********************************************************************************************************************/
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_KERNEL ) || defined ( OS_LINK_CONST_KERNEL_FAR )
+block OS_CORE0_CONST_BLOCK with alignment = 32 { section .OS_CORE0_CONST },
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_KERNEL ) || defined ( OS_LINK_CONST_KERNEL_NEAR )
+block OS_CORE0_CONST_FAST_BLOCK with alignment = 32 { section .OS_CORE0_CONST_FAST },
+#endif
+
+#if defined ( OS_LINK_INTVEC_CONST )
+block OS_INTVEC_CORE0_CONST_BLOCK with alignment = 32 { section .OS_INTVEC_CORE0_CONST },
+#endif
+
+#if defined ( OS_LINK_EXCVEC_CONST )
+block OS_EXCVEC_CORE0_CONST_BLOCK with alignment = 32 { section .OS_EXCVEC_CORE0_CONST },
+#endif
+
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_APP ) || defined ( OS_LINK_CONST_APP_SYSTEMAPPLICATION_OSCORE0 ) || defined ( OS_LINK_CONST_APP_SYSTEMAPPLICATION_OSCORE0_FAR )
+block OS_SystemApplication_OsCore0_CONST_BLOCK with alignment = 32 { section .OS_SystemApplication_OsCore0_CONST },
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_APP ) || defined ( OS_LINK_CONST_APP_SYSTEMAPPLICATION_OSCORE0 ) || defined ( OS_LINK_CONST_APP_SYSTEMAPPLICATION_OSCORE0_NEAR )
+block OS_SystemApplication_OsCore0_CONST_FAST_BLOCK with alignment = 32 { section .OS_SystemApplication_OsCore0_CONST_FAST },
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_APP ) || defined ( OS_LINK_CONST_APP_SYSTEMAPPLICATION_OSCORE0 ) || defined ( OS_LINK_CONST_APP_SYSTEMAPPLICATION_OSCORE0_INIT )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif
+
+#ifdef OS_LINK_CONST_APP_SYSTEMAPPLICATION_OSCORE0
+# undef OS_LINK_CONST_APP_SYSTEMAPPLICATION_OSCORE0
+#endif
+
+#ifdef OS_LINK_CONST_APP_SYSTEMAPPLICATION_OSCORE0_FAR
+# undef OS_LINK_CONST_APP_SYSTEMAPPLICATION_OSCORE0_FAR
+#endif
+
+#ifdef OS_LINK_CONST_APP_SYSTEMAPPLICATION_OSCORE0_NEAR
+# undef OS_LINK_CONST_APP_SYSTEMAPPLICATION_OSCORE0_NEAR
+#endif
+
+#ifdef OS_LINK_CONST_APP_SYSTEMAPPLICATION_OSCORE0_INIT
+# undef OS_LINK_CONST_APP_SYSTEMAPPLICATION_OSCORE0_INIT
+#endif
+
+
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_IDLETASK_OSCORE0 ) || defined ( OS_LINK_CONST_TASK_IDLETASK_OSCORE0_FAR )
+block OS_IdleTask_OsCore0_CONST_BLOCK with alignment = 32 { section .OS_IdleTask_OsCore0_CONST },
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_IDLETASK_OSCORE0 ) || defined ( OS_LINK_CONST_TASK_IDLETASK_OSCORE0_NEAR )
+block OS_IdleTask_OsCore0_CONST_FAST_BLOCK with alignment = 32 { section .OS_IdleTask_OsCore0_CONST_FAST },
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_IDLETASK_OSCORE0 ) || defined ( OS_LINK_CONST_TASK_IDLETASK_OSCORE0_INIT )
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif
+
+#ifdef OS_LINK_CONST_TASK_IDLETASK_OSCORE0
+# undef OS_LINK_CONST_TASK_IDLETASK_OSCORE0
+#endif
+
+#ifdef OS_LINK_CONST_TASK_IDLETASK_OSCORE0_FAR
+# undef OS_LINK_CONST_TASK_IDLETASK_OSCORE0_FAR
+#endif
+
+#ifdef OS_LINK_CONST_TASK_IDLETASK_OSCORE0_NEAR
+# undef OS_LINK_CONST_TASK_IDLETASK_OSCORE0_NEAR
+#endif
+
+#ifdef OS_LINK_CONST_TASK_IDLETASK_OSCORE0_INIT
+# undef OS_LINK_CONST_TASK_IDLETASK_OSCORE0_INIT
+#endif
+
+
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_10MS ) || defined ( OS_LINK_CONST_TASK_OSTASK_10MS_FAR )
+block OS_OsTask_10ms_CONST_BLOCK with alignment = 32 { section .OS_OsTask_10ms_CONST },
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_10MS ) || defined ( OS_LINK_CONST_TASK_OSTASK_10MS_NEAR )
+block OS_OsTask_10ms_CONST_FAST_BLOCK with alignment = 32 { section .OS_OsTask_10ms_CONST_FAST },
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_10MS ) || defined ( OS_LINK_CONST_TASK_OSTASK_10MS_INIT )
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_10MS
+# undef OS_LINK_CONST_TASK_OSTASK_10MS
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_10MS_FAR
+# undef OS_LINK_CONST_TASK_OSTASK_10MS_FAR
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_10MS_NEAR
+# undef OS_LINK_CONST_TASK_OSTASK_10MS_NEAR
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_10MS_INIT
+# undef OS_LINK_CONST_TASK_OSTASK_10MS_INIT
+#endif
+
+
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_FAR )
+block OS_OsTask_BSW_CONST_BLOCK with alignment = 32 { section .OS_OsTask_BSW_CONST },
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_NEAR )
+block OS_OsTask_BSW_CONST_FAST_BLOCK with alignment = 32 { section .OS_OsTask_BSW_CONST_FAST },
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_INIT )
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW
+# undef OS_LINK_CONST_TASK_OSTASK_BSW
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_FAR
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_FAR
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_NEAR
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_NEAR
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_INIT
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_INIT
+#endif
+
+
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_INIT ) || defined ( OS_LINK_CONST_TASK_OSTASK_INIT_FAR )
+block OS_OsTask_Init_CONST_BLOCK with alignment = 32 { section .OS_OsTask_Init_CONST },
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_INIT ) || defined ( OS_LINK_CONST_TASK_OSTASK_INIT_NEAR )
+block OS_OsTask_Init_CONST_FAST_BLOCK with alignment = 32 { section .OS_OsTask_Init_CONST_FAST },
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_INIT ) || defined ( OS_LINK_CONST_TASK_OSTASK_INIT_INIT )
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_INIT
+# undef OS_LINK_CONST_TASK_OSTASK_INIT
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_INIT_FAR
+# undef OS_LINK_CONST_TASK_OSTASK_INIT_FAR
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_INIT_NEAR
+# undef OS_LINK_CONST_TASK_OSTASK_INIT_NEAR
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_INIT_INIT
+# undef OS_LINK_CONST_TASK_OSTASK_INIT_INIT
+#endif
+
+
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_ISR ) || defined ( OS_LINK_CONST_ISR_COUNTERISR_SYSTEMTIMER ) || defined ( OS_LINK_CONST_ISR_COUNTERISR_SYSTEMTIMER_FAR )
+block OS_CounterIsr_SystemTimer_CONST_BLOCK with alignment = 32 { section .OS_CounterIsr_SystemTimer_CONST },
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_ISR ) || defined ( OS_LINK_CONST_ISR_COUNTERISR_SYSTEMTIMER ) || defined ( OS_LINK_CONST_ISR_COUNTERISR_SYSTEMTIMER_NEAR )
+block OS_CounterIsr_SystemTimer_CONST_FAST_BLOCK with alignment = 32 { section .OS_CounterIsr_SystemTimer_CONST_FAST },
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_ISR ) || defined ( OS_LINK_CONST_ISR_COUNTERISR_SYSTEMTIMER ) || defined ( OS_LINK_CONST_ISR_COUNTERISR_SYSTEMTIMER_INIT )
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif
+
+#ifdef OS_LINK_CONST_ISR_COUNTERISR_SYSTEMTIMER
+# undef OS_LINK_CONST_ISR_COUNTERISR_SYSTEMTIMER
+#endif
+
+#ifdef OS_LINK_CONST_ISR_COUNTERISR_SYSTEMTIMER_FAR
+# undef OS_LINK_CONST_ISR_COUNTERISR_SYSTEMTIMER_FAR
+#endif
+
+#ifdef OS_LINK_CONST_ISR_COUNTERISR_SYSTEMTIMER_NEAR
+# undef OS_LINK_CONST_ISR_COUNTERISR_SYSTEMTIMER_NEAR
+#endif
+
+#ifdef OS_LINK_CONST_ISR_COUNTERISR_SYSTEMTIMER_INIT
+# undef OS_LINK_CONST_ISR_COUNTERISR_SYSTEMTIMER_INIT
+#endif
+
+
+
+#ifdef OS_LINK_CONST
+# undef OS_LINK_CONST
+#endif
+
+#ifdef OS_LINK_CONST_APP
+# undef OS_LINK_CONST_APP
+#endif
+
+#ifdef OS_LINK_CONST_TASK
+# undef OS_LINK_CONST_TASK
+#endif
+
+#ifdef OS_LINK_CONST_ISR
+# undef OS_LINK_CONST_ISR
+#endif
+
+#ifdef OS_LINK_CONST_KERNEL
+# undef OS_LINK_CONST_KERNEL
+#endif
+
+#ifdef OS_LINK_CONST_KERNEL_FAR
+# undef OS_LINK_CONST_KERNEL_FAR
+#endif
+
+#ifdef OS_LINK_CONST_KERNEL_NEAR
+# undef OS_LINK_CONST_KERNEL_NEAR
+#endif
+
+#ifdef OS_LINK_INTVEC_CONST
+# undef OS_LINK_INTVEC_CONST
+#endif
+
+#ifdef OS_LINK_EXCVEC_CONST
+# undef OS_LINK_EXCVEC_CONST
+#endif
+
+
+/**********************************************************************************************************************
+ *  VAR SECTIONS
+ *********************************************************************************************************************/
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_KERNEL ) || defined ( OS_LINK_VAR_KERNEL_FAR ) || defined ( OS_LINK_VAR_KERNEL_FAR_CACHE ) || defined ( OS_LINK_VAR_KERNEL_FAR_CACHE_INIT )
+block OS_CORE0_VAR_BLOCK with alignment = 32 { section .OS_CORE0_VAR },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_KERNEL ) || defined ( OS_LINK_VAR_KERNEL_FAR ) || defined ( OS_LINK_VAR_KERNEL_FAR_CACHE ) || defined ( OS_LINK_VAR_KERNEL_FAR_CACHE_NOINIT )
+block OS_CORE0_VAR_NOINIT_BLOCK with alignment = 32 { section .OS_CORE0_VAR_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_KERNEL ) || defined ( OS_LINK_VAR_KERNEL_NEAR ) || defined ( OS_LINK_VAR_KERNEL_NEAR_CACHE ) || defined ( OS_LINK_VAR_KERNEL_NEAR_CACHE_INIT )
+block OS_CORE0_VAR_FAST_BLOCK with alignment = 32 { section .OS_CORE0_VAR_FAST },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_KERNEL ) || defined ( OS_LINK_VAR_KERNEL_NEAR ) || defined ( OS_LINK_VAR_KERNEL_NEAR_CACHE ) || defined ( OS_LINK_VAR_KERNEL_NEAR_CACHE_NOINIT )
+block OS_CORE0_VAR_FAST_NOINIT_BLOCK with alignment = 32 { section .OS_CORE0_VAR_FAST_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_KERNEL ) || defined ( OS_LINK_VAR_KERNEL_FAR ) || defined ( OS_LINK_VAR_KERNEL_FAR_NOCACHE ) || defined ( OS_LINK_VAR_KERNEL_FAR_NOCACHE_INIT )
+block OS_CORE0_VAR_NOCACHE_BLOCK with alignment = 32 { section .OS_CORE0_VAR_NOCACHE },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_KERNEL ) || defined ( OS_LINK_VAR_KERNEL_FAR ) || defined ( OS_LINK_VAR_KERNEL_FAR_NOCACHE ) || defined ( OS_LINK_VAR_KERNEL_FAR_NOCACHE_NOINIT )
+block OS_CORE0_VAR_NOCACHE_NOINIT_BLOCK with alignment = 32 { section .OS_CORE0_VAR_NOCACHE_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_KERNEL ) || defined ( OS_LINK_VAR_KERNEL_NEAR ) || defined ( OS_LINK_VAR_KERNEL_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_KERNEL_NEAR_NOCACHE_INIT )
+block OS_CORE0_VAR_FAST_NOCACHE_BLOCK with alignment = 32 { section .OS_CORE0_VAR_FAST_NOCACHE },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_KERNEL ) || defined ( OS_LINK_VAR_KERNEL_NEAR ) || defined ( OS_LINK_VAR_KERNEL_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_KERNEL_NEAR_NOCACHE_NOINIT )
+block OS_CORE0_VAR_FAST_NOCACHE_NOINIT_BLOCK with alignment = 32 { section .OS_CORE0_VAR_FAST_NOCACHE_NOINIT },
+#endif
+
+#if defined ( OS_LINK_KERNEL_TRACE ) || defined ( OS_LINK_KERNEL_TRACE_FAR )
+block OS_PUBLIC_CORE0_VAR_NOINIT_BLOCK with alignment = 32 { section .OS_PUBLIC_CORE0_VAR_NOINIT },
+#endif
+
+#if defined ( OS_LINK_KERNEL_TRACE ) || defined ( OS_LINK_KERNEL_TRACE_NEAR )
+block OS_PUBLIC_CORE0_VAR_FAST_NOINIT_BLOCK with alignment = 32 { section .OS_PUBLIC_CORE0_VAR_FAST_NOINIT },
+#endif
+
+#if defined ( OS_LINK_KERNEL_BARRIERS ) || defined ( OS_LINK_KERNEL_BARRIERS_FAR )
+block OS_BARRIER_CORE0_VAR_NOCACHE_NOINIT_BLOCK with alignment = 32 { section .OS_BARRIER_CORE0_VAR_NOCACHE_NOINIT },
+#endif
+
+#if defined ( OS_LINK_KERNEL_BARRIERS ) || defined ( OS_LINK_KERNEL_BARRIERS_NEAR )
+block OS_BARRIER_CORE0_VAR_FAST_NOCACHE_NOINIT_BLOCK with alignment = 32 { section .OS_BARRIER_CORE0_VAR_FAST_NOCACHE_NOINIT },
+#endif
+
+#if defined ( OS_LINK_KERNEL_CORESTATUS ) || defined ( OS_LINK_KERNEL_CORESTATUS_FAR )
+block OS_CORESTATUS_CORE0_VAR_NOCACHE_NOINIT_BLOCK with alignment = 32 { section .OS_CORESTATUS_CORE0_VAR_NOCACHE_NOINIT },
+#endif
+
+#if defined ( OS_LINK_KERNEL_CORESTATUS ) || defined ( OS_LINK_KERNEL_CORESTATUS_NEAR )
+block OS_CORESTATUS_CORE0_VAR_FAST_NOCACHE_NOINIT_BLOCK with alignment = 32 { section .OS_CORESTATUS_CORE0_VAR_FAST_NOCACHE_NOINIT },
+#endif
+
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0
+block OS_SystemApplication_OsCore0_VAR_ALL_BLOCK with fixed order, alignment = 32 {
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_APP ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0 ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_CACHE_INIT )
+block OS_SystemApplication_OsCore0_VAR_BLOCK with alignment = 32 { section .OS_SystemApplication_OsCore0_VAR },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_APP ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0 ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_CACHE_NOINIT )
+block OS_SystemApplication_OsCore0_VAR_NOINIT_BLOCK with alignment = 32 { section .OS_SystemApplication_OsCore0_VAR_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_APP ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0 ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_CACHE_ZERO_INIT )
+block OS_SystemApplication_OsCore0_VAR_ZERO_INIT_BLOCK with alignment = 32 { section .OS_SystemApplication_OsCore0_VAR_ZERO_INIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_APP ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0 ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_CACHE_INIT )
+block OS_SystemApplication_OsCore0_VAR_FAST_BLOCK with alignment = 32 { section .OS_SystemApplication_OsCore0_VAR_FAST },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_APP ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0 ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_CACHE_NOINIT )
+block OS_SystemApplication_OsCore0_VAR_FAST_NOINIT_BLOCK with alignment = 32 { section .OS_SystemApplication_OsCore0_VAR_FAST_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_APP ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0 ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_CACHE_ZERO_INIT )
+block OS_SystemApplication_OsCore0_VAR_FAST_ZERO_INIT_BLOCK with alignment = 32 { section .OS_SystemApplication_OsCore0_VAR_FAST_ZERO_INIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_APP ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0 ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_NOCACHE_INIT )
+block OS_SystemApplication_OsCore0_VAR_NOCACHE_BLOCK with alignment = 32 { section .OS_SystemApplication_OsCore0_VAR_NOCACHE },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_APP ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0 ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_NOCACHE_NOINIT )
+block OS_SystemApplication_OsCore0_VAR_NOCACHE_NOINIT_BLOCK with alignment = 32 { section .OS_SystemApplication_OsCore0_VAR_NOCACHE_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_APP ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0 ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_NOCACHE_ZERO_INIT )
+block OS_SystemApplication_OsCore0_VAR_NOCACHE_ZERO_INIT_BLOCK with alignment = 32 { section .OS_SystemApplication_OsCore0_VAR_NOCACHE_ZERO_INIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_APP ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0 ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_NOCACHE_INIT )
+block OS_SystemApplication_OsCore0_VAR_FAST_NOCACHE_BLOCK with alignment = 32 { section .OS_SystemApplication_OsCore0_VAR_FAST_NOCACHE },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_APP ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0 ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_NOCACHE_NOINIT )
+block OS_SystemApplication_OsCore0_VAR_FAST_NOCACHE_NOINIT_BLOCK with alignment = 32 { section .OS_SystemApplication_OsCore0_VAR_FAST_NOCACHE_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_APP ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0 ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_NOCACHE_ZERO_INIT )
+block OS_SystemApplication_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT_BLOCK with alignment = 32 { section .OS_SystemApplication_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT },
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0
+},
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_CACHE
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_CACHE_INIT
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_CACHE_NOINIT
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_NOCACHE
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_NOCACHE_INIT
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_FAR_NOCACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_CACHE
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_CACHE_INIT
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_CACHE_NOINIT
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_NOCACHE
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_NOCACHE_INIT
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_NOCACHE_ZERO_INIT
+#endif
+
+
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0
+block OS_IdleTask_OsCore0_VAR_ALL_BLOCK with fixed order, alignment = 32 {
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_CACHE_INIT )
+block OS_IdleTask_OsCore0_VAR_BLOCK with alignment = 32 { section .OS_IdleTask_OsCore0_VAR },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_CACHE_NOINIT )
+block OS_IdleTask_OsCore0_VAR_NOINIT_BLOCK with alignment = 32 { section .OS_IdleTask_OsCore0_VAR_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_CACHE_ZERO_INIT )
+block OS_IdleTask_OsCore0_VAR_ZERO_INIT_BLOCK with alignment = 32 { section .OS_IdleTask_OsCore0_VAR_ZERO_INIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_CACHE_INIT )
+block OS_IdleTask_OsCore0_VAR_FAST_BLOCK with alignment = 32 { section .OS_IdleTask_OsCore0_VAR_FAST },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_CACHE_NOINIT )
+block OS_IdleTask_OsCore0_VAR_FAST_NOINIT_BLOCK with alignment = 32 { section .OS_IdleTask_OsCore0_VAR_FAST_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_CACHE_ZERO_INIT )
+block OS_IdleTask_OsCore0_VAR_FAST_ZERO_INIT_BLOCK with alignment = 32 { section .OS_IdleTask_OsCore0_VAR_FAST_ZERO_INIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_NOCACHE_INIT )
+block OS_IdleTask_OsCore0_VAR_NOCACHE_BLOCK with alignment = 32 { section .OS_IdleTask_OsCore0_VAR_NOCACHE },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_NOCACHE_NOINIT )
+block OS_IdleTask_OsCore0_VAR_NOCACHE_NOINIT_BLOCK with alignment = 32 { section .OS_IdleTask_OsCore0_VAR_NOCACHE_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_NOCACHE_ZERO_INIT )
+block OS_IdleTask_OsCore0_VAR_NOCACHE_ZERO_INIT_BLOCK with alignment = 32 { section .OS_IdleTask_OsCore0_VAR_NOCACHE_ZERO_INIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_NOCACHE_INIT )
+block OS_IdleTask_OsCore0_VAR_FAST_NOCACHE_BLOCK with alignment = 32 { section .OS_IdleTask_OsCore0_VAR_FAST_NOCACHE },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_NOCACHE_NOINIT )
+block OS_IdleTask_OsCore0_VAR_FAST_NOCACHE_NOINIT_BLOCK with alignment = 32 { section .OS_IdleTask_OsCore0_VAR_FAST_NOCACHE_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_NOCACHE_ZERO_INIT )
+block OS_IdleTask_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT_BLOCK with alignment = 32 { section .OS_IdleTask_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT },
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0
+},
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_CACHE
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_NOCACHE
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_FAR_NOCACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_CACHE
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_NOCACHE
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_IDLETASK_OSCORE0_NEAR_NOCACHE_ZERO_INIT
+#endif
+
+
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS
+block OS_OsTask_10ms_VAR_ALL_BLOCK with fixed order, alignment = 32 {
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_FAR_CACHE_INIT )
+block OS_OsTask_10ms_VAR_BLOCK with alignment = 32 { section .OS_OsTask_10ms_VAR },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_FAR_CACHE_NOINIT )
+block OS_OsTask_10ms_VAR_NOINIT_BLOCK with alignment = 32 { section .OS_OsTask_10ms_VAR_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_FAR_CACHE_ZERO_INIT )
+block OS_OsTask_10ms_VAR_ZERO_INIT_BLOCK with alignment = 32 { section .OS_OsTask_10ms_VAR_ZERO_INIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_CACHE_INIT )
+block OS_OsTask_10ms_VAR_FAST_BLOCK with alignment = 32 { section .OS_OsTask_10ms_VAR_FAST },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_CACHE_NOINIT )
+block OS_OsTask_10ms_VAR_FAST_NOINIT_BLOCK with alignment = 32 { section .OS_OsTask_10ms_VAR_FAST_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_CACHE_ZERO_INIT )
+block OS_OsTask_10ms_VAR_FAST_ZERO_INIT_BLOCK with alignment = 32 { section .OS_OsTask_10ms_VAR_FAST_ZERO_INIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_FAR_NOCACHE_INIT )
+block OS_OsTask_10ms_VAR_NOCACHE_BLOCK with alignment = 32 { section .OS_OsTask_10ms_VAR_NOCACHE },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_FAR_NOCACHE_NOINIT )
+block OS_OsTask_10ms_VAR_NOCACHE_NOINIT_BLOCK with alignment = 32 { section .OS_OsTask_10ms_VAR_NOCACHE_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_FAR_NOCACHE_ZERO_INIT )
+block OS_OsTask_10ms_VAR_NOCACHE_ZERO_INIT_BLOCK with alignment = 32 { section .OS_OsTask_10ms_VAR_NOCACHE_ZERO_INIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_NOCACHE_INIT )
+block OS_OsTask_10ms_VAR_FAST_NOCACHE_BLOCK with alignment = 32 { section .OS_OsTask_10ms_VAR_FAST_NOCACHE },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_NOCACHE_NOINIT )
+block OS_OsTask_10ms_VAR_FAST_NOCACHE_NOINIT_BLOCK with alignment = 32 { section .OS_OsTask_10ms_VAR_FAST_NOCACHE_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_NOCACHE_ZERO_INIT )
+block OS_OsTask_10ms_VAR_FAST_NOCACHE_ZERO_INIT_BLOCK with alignment = 32 { section .OS_OsTask_10ms_VAR_FAST_NOCACHE_ZERO_INIT },
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS
+},
+# undef OS_LINK_VAR_TASK_OSTASK_10MS
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS_FAR
+# undef OS_LINK_VAR_TASK_OSTASK_10MS_FAR
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS_FAR_CACHE
+# undef OS_LINK_VAR_TASK_OSTASK_10MS_FAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS_FAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_10MS_FAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS_FAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_10MS_FAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS_FAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_10MS_FAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS_FAR_NOCACHE
+# undef OS_LINK_VAR_TASK_OSTASK_10MS_FAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS_FAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_10MS_FAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS_FAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_10MS_FAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS_FAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_10MS_FAR_NOCACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS_NEAR
+# undef OS_LINK_VAR_TASK_OSTASK_10MS_NEAR
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_CACHE
+# undef OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_NOCACHE
+# undef OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_10MS_NEAR_NOCACHE_ZERO_INIT
+#endif
+
+
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW
+block OS_OsTask_BSW_VAR_ALL_BLOCK with fixed order, alignment = 32 {
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_FAR_CACHE_INIT )
+block OS_OsTask_BSW_VAR_BLOCK with alignment = 32 { section .OS_OsTask_BSW_VAR },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_FAR_CACHE_NOINIT )
+block OS_OsTask_BSW_VAR_NOINIT_BLOCK with alignment = 32 { section .OS_OsTask_BSW_VAR_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_FAR_CACHE_ZERO_INIT )
+block OS_OsTask_BSW_VAR_ZERO_INIT_BLOCK with alignment = 32 { section .OS_OsTask_BSW_VAR_ZERO_INIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_CACHE_INIT )
+block OS_OsTask_BSW_VAR_FAST_BLOCK with alignment = 32 { section .OS_OsTask_BSW_VAR_FAST },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_CACHE_NOINIT )
+block OS_OsTask_BSW_VAR_FAST_NOINIT_BLOCK with alignment = 32 { section .OS_OsTask_BSW_VAR_FAST_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_CACHE_ZERO_INIT )
+block OS_OsTask_BSW_VAR_FAST_ZERO_INIT_BLOCK with alignment = 32 { section .OS_OsTask_BSW_VAR_FAST_ZERO_INIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_FAR_NOCACHE_INIT )
+block OS_OsTask_BSW_VAR_NOCACHE_BLOCK with alignment = 32 { section .OS_OsTask_BSW_VAR_NOCACHE },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_FAR_NOCACHE_NOINIT )
+block OS_OsTask_BSW_VAR_NOCACHE_NOINIT_BLOCK with alignment = 32 { section .OS_OsTask_BSW_VAR_NOCACHE_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_FAR_NOCACHE_ZERO_INIT )
+block OS_OsTask_BSW_VAR_NOCACHE_ZERO_INIT_BLOCK with alignment = 32 { section .OS_OsTask_BSW_VAR_NOCACHE_ZERO_INIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_NOCACHE_INIT )
+block OS_OsTask_BSW_VAR_FAST_NOCACHE_BLOCK with alignment = 32 { section .OS_OsTask_BSW_VAR_FAST_NOCACHE },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_NOCACHE_NOINIT )
+block OS_OsTask_BSW_VAR_FAST_NOCACHE_NOINIT_BLOCK with alignment = 32 { section .OS_OsTask_BSW_VAR_FAST_NOCACHE_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_NOCACHE_ZERO_INIT )
+block OS_OsTask_BSW_VAR_FAST_NOCACHE_ZERO_INIT_BLOCK with alignment = 32 { section .OS_OsTask_BSW_VAR_FAST_NOCACHE_ZERO_INIT },
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW
+},
+# undef OS_LINK_VAR_TASK_OSTASK_BSW
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_FAR
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_FAR
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_FAR_CACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_FAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_FAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_FAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_FAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_FAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_FAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_FAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_FAR_NOCACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_FAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_FAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_FAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_FAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_FAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_FAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_FAR_NOCACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_NEAR
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_NEAR
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_CACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_NOCACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_NEAR_NOCACHE_ZERO_INIT
+#endif
+
+
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT
+block OS_OsTask_Init_VAR_ALL_BLOCK with fixed order, alignment = 32 {
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_FAR_CACHE_INIT )
+block OS_OsTask_Init_VAR_BLOCK with alignment = 32 { section .OS_OsTask_Init_VAR },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_FAR_CACHE_NOINIT )
+block OS_OsTask_Init_VAR_NOINIT_BLOCK with alignment = 32 { section .OS_OsTask_Init_VAR_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_FAR_CACHE_ZERO_INIT )
+block OS_OsTask_Init_VAR_ZERO_INIT_BLOCK with alignment = 32 { section .OS_OsTask_Init_VAR_ZERO_INIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_CACHE_INIT )
+block OS_OsTask_Init_VAR_FAST_BLOCK with alignment = 32 { section .OS_OsTask_Init_VAR_FAST },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_CACHE_NOINIT )
+block OS_OsTask_Init_VAR_FAST_NOINIT_BLOCK with alignment = 32 { section .OS_OsTask_Init_VAR_FAST_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_CACHE_ZERO_INIT )
+block OS_OsTask_Init_VAR_FAST_ZERO_INIT_BLOCK with alignment = 32 { section .OS_OsTask_Init_VAR_FAST_ZERO_INIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_FAR_NOCACHE_INIT )
+block OS_OsTask_Init_VAR_NOCACHE_BLOCK with alignment = 32 { section .OS_OsTask_Init_VAR_NOCACHE },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_FAR_NOCACHE_NOINIT )
+block OS_OsTask_Init_VAR_NOCACHE_NOINIT_BLOCK with alignment = 32 { section .OS_OsTask_Init_VAR_NOCACHE_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_FAR_NOCACHE_ZERO_INIT )
+block OS_OsTask_Init_VAR_NOCACHE_ZERO_INIT_BLOCK with alignment = 32 { section .OS_OsTask_Init_VAR_NOCACHE_ZERO_INIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_NOCACHE_INIT )
+block OS_OsTask_Init_VAR_FAST_NOCACHE_BLOCK with alignment = 32 { section .OS_OsTask_Init_VAR_FAST_NOCACHE },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_NOCACHE_NOINIT )
+block OS_OsTask_Init_VAR_FAST_NOCACHE_NOINIT_BLOCK with alignment = 32 { section .OS_OsTask_Init_VAR_FAST_NOCACHE_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_NOCACHE_ZERO_INIT )
+block OS_OsTask_Init_VAR_FAST_NOCACHE_ZERO_INIT_BLOCK with alignment = 32 { section .OS_OsTask_Init_VAR_FAST_NOCACHE_ZERO_INIT },
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT
+},
+# undef OS_LINK_VAR_TASK_OSTASK_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT_FAR
+# undef OS_LINK_VAR_TASK_OSTASK_INIT_FAR
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT_FAR_CACHE
+# undef OS_LINK_VAR_TASK_OSTASK_INIT_FAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT_FAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_INIT_FAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT_FAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_INIT_FAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT_FAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_INIT_FAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT_FAR_NOCACHE
+# undef OS_LINK_VAR_TASK_OSTASK_INIT_FAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT_FAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_INIT_FAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT_FAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_INIT_FAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT_FAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_INIT_FAR_NOCACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT_NEAR
+# undef OS_LINK_VAR_TASK_OSTASK_INIT_NEAR
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_CACHE
+# undef OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_NOCACHE
+# undef OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_INIT_NEAR_NOCACHE_ZERO_INIT
+#endif
+
+
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER
+block OS_CounterIsr_SystemTimer_VAR_ALL_BLOCK with fixed order, alignment = 32 {
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_CACHE ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_CACHE_INIT )
+block OS_CounterIsr_SystemTimer_VAR_BLOCK with alignment = 32 { section .OS_CounterIsr_SystemTimer_VAR },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_CACHE ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_CACHE_NOINIT )
+block OS_CounterIsr_SystemTimer_VAR_NOINIT_BLOCK with alignment = 32 { section .OS_CounterIsr_SystemTimer_VAR_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_CACHE ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_CACHE_ZERO_INIT )
+block OS_CounterIsr_SystemTimer_VAR_ZERO_INIT_BLOCK with alignment = 32 { section .OS_CounterIsr_SystemTimer_VAR_ZERO_INIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_CACHE ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_CACHE_INIT )
+block OS_CounterIsr_SystemTimer_VAR_FAST_BLOCK with alignment = 32 { section .OS_CounterIsr_SystemTimer_VAR_FAST },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_CACHE ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_CACHE_NOINIT )
+block OS_CounterIsr_SystemTimer_VAR_FAST_NOINIT_BLOCK with alignment = 32 { section .OS_CounterIsr_SystemTimer_VAR_FAST_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_CACHE ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_CACHE_ZERO_INIT )
+block OS_CounterIsr_SystemTimer_VAR_FAST_ZERO_INIT_BLOCK with alignment = 32 { section .OS_CounterIsr_SystemTimer_VAR_FAST_ZERO_INIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_NOCACHE ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_NOCACHE_INIT )
+block OS_CounterIsr_SystemTimer_VAR_NOCACHE_BLOCK with alignment = 32 { section .OS_CounterIsr_SystemTimer_VAR_NOCACHE },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_NOCACHE ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_NOCACHE_NOINIT )
+block OS_CounterIsr_SystemTimer_VAR_NOCACHE_NOINIT_BLOCK with alignment = 32 { section .OS_CounterIsr_SystemTimer_VAR_NOCACHE_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_NOCACHE ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_NOCACHE_ZERO_INIT )
+block OS_CounterIsr_SystemTimer_VAR_NOCACHE_ZERO_INIT_BLOCK with alignment = 32 { section .OS_CounterIsr_SystemTimer_VAR_NOCACHE_ZERO_INIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_NOCACHE_INIT )
+block OS_CounterIsr_SystemTimer_VAR_FAST_NOCACHE_BLOCK with alignment = 32 { section .OS_CounterIsr_SystemTimer_VAR_FAST_NOCACHE },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_NOCACHE_NOINIT )
+block OS_CounterIsr_SystemTimer_VAR_FAST_NOCACHE_NOINIT_BLOCK with alignment = 32 { section .OS_CounterIsr_SystemTimer_VAR_FAST_NOCACHE_NOINIT },
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_NOCACHE_ZERO_INIT )
+block OS_CounterIsr_SystemTimer_VAR_FAST_NOCACHE_ZERO_INIT_BLOCK with alignment = 32 { section .OS_CounterIsr_SystemTimer_VAR_FAST_NOCACHE_ZERO_INIT },
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER
+},
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_CACHE
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_CACHE_INIT
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_CACHE_NOINIT
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_NOCACHE
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_NOCACHE_INIT
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_FAR_NOCACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_CACHE
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_CACHE_INIT
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_CACHE_NOINIT
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_NOCACHE
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_NOCACHE_INIT
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_NEAR_NOCACHE_ZERO_INIT
+#endif
+
+
+#ifdef OS_LINK_VAR
+# undef OS_LINK_VAR
+#endif
+
+#ifdef OS_LINK_VAR_APP
+# undef OS_LINK_VAR_APP
+#endif
+
+#ifdef OS_LINK_VAR_TASK
+# undef OS_LINK_VAR_TASK
+#endif
+
+#ifdef OS_LINK_VAR_ISR
+# undef OS_LINK_VAR_ISR
+#endif
+
+#ifdef OS_LINK_KERNEL_TRACE
+# undef OS_LINK_KERNEL_TRACE
+#endif
+
+#ifdef OS_LINK_KERNEL_TRACE_FAR
+# undef OS_LINK_KERNEL_TRACE_FAR
+#endif
+
+#ifdef OS_LINK_KERNEL_TRACE_NEAR
+# undef OS_LINK_KERNEL_TRACE_NEAR
+#endif
+
+#ifdef OS_LINK_KERNEL_BARRIERS
+# undef OS_LINK_KERNEL_BARRIERS
+#endif
+
+#ifdef OS_LINK_KERNEL_BARRIERS_FAR
+# undef OS_LINK_KERNEL_BARRIERS_FAR
+#endif
+
+#ifdef OS_LINK_KERNEL_BARRIERS_NEAR
+# undef OS_LINK_KERNEL_BARRIERS_NEAR
+#endif
+
+#ifdef OS_LINK_KERNEL_CORESTATUS
+# undef OS_LINK_KERNEL_CORESTATUS
+#endif
+
+#ifdef OS_LINK_KERNEL_CORESTATUS_FAR
+# undef OS_LINK_KERNEL_CORESTATUS_FAR
+#endif
+
+#ifdef OS_LINK_KERNEL_CORESTATUS_NEAR
+# undef OS_LINK_KERNEL_CORESTATUS_NEAR
+#endif
+
+#ifdef OS_LINK_VAR_KERNEL
+# undef OS_LINK_VAR_KERNEL
+#endif
+
+#ifdef OS_LINK_VAR_KERNEL_FAR
+# undef OS_LINK_VAR_KERNEL_FAR
+#endif
+
+#ifdef OS_LINK_VAR_KERNEL_FAR_CACHE
+# undef OS_LINK_VAR_KERNEL_FAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_KERNEL_FAR_CACHE_INIT
+# undef OS_LINK_VAR_KERNEL_FAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_KERNEL_FAR_CACHE_NOINIT
+# undef OS_LINK_VAR_KERNEL_FAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_KERNEL_FAR_NOCACHE
+# undef OS_LINK_VAR_KERNEL_FAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_KERNEL_FAR_NOCACHE_INIT
+# undef OS_LINK_VAR_KERNEL_FAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_KERNEL_FAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_KERNEL_FAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_KERNEL_NEAR
+# undef OS_LINK_VAR_KERNEL_NEAR
+#endif
+
+#ifdef OS_LINK_VAR_KERNEL_NEAR_CACHE
+# undef OS_LINK_VAR_KERNEL_NEAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_KERNEL_NEAR_CACHE_INIT
+# undef OS_LINK_VAR_KERNEL_NEAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_KERNEL_NEAR_CACHE_NOINIT
+# undef OS_LINK_VAR_KERNEL_NEAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_KERNEL_NEAR_NOCACHE
+# undef OS_LINK_VAR_KERNEL_NEAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_KERNEL_NEAR_NOCACHE_INIT
+# undef OS_LINK_VAR_KERNEL_NEAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_KERNEL_NEAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_KERNEL_NEAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_KERNEL_NEAR_CACHE_INIT
+# undef OS_LINK_VAR_KERNEL_NEAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_KERNEL_NEAR_CACHE_INIT
+# undef OS_LINK_VAR_KERNEL_NEAR_CACHE_INIT
+#endif
+
+

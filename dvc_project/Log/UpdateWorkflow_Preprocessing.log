@@ -1,0 +1,33 @@
+2026-10-16 - 19:23:28
+Workflow 'Input File Pre-Processing' started.
+ 19:23:28 - Action 'Converting legacy file(s) to AUTOSAR files' started.
+ 19:23:28 - Action 'Converting legacy file(s) to AUTOSAR files' started.
+              Convert legacy file(s) to System Description.
+              Used executable: D:\BaiduNetdiskDownload\DaVinci\CBD1800257_D01_S32K1xx\Generators\LegacyDb2SystemDescrConverter\LegacyDb2SystemDescrConverter.exe.
+              Arguments: "D:\Autosar\PIL_10_5\labview project\PIHIL.dbc" -o "C:\Users\user\AppData\Local\Temp\DaVinci\Cfg-9456193\LegacyConverterResults\1792149808614-0\ConvertedLegacy" -r 42 -e -v 19.
+              
+              Vector Legacy Database Converter.
+              Version: 1.8.24.0.
+              Copyright (c) 2018 Vector Informatik GmbH.
+              License is restricted to the usage with CBD1800257 (D01) for MSR_Vector_SLP4.
+              
+              [info] SIP License found as D:\BaiduNetdiskDownload\DaVinci\CBD1800257_D01_S32K1xx\SipLicense.lic.
+              [info] Command line: D:\BaiduNetdiskDownload\DaVinci\CBD1800257_D01_S32K1xx\Generators\LegacyDb2SystemDescrConverter\LegacyDb2SystemDescrConverter.exe "D:\Autosar\PIL_10_5\labview project\PIHIL.dbc" -o "C:\Users\user\AppData\Local\Temp\DaVinci\Cfg-9456193\LegacyConverterResults\1792149808614-0\ConvertedLegacy" -r 42 -e -v 19.
+              [info] Converting DBC file D:\Autosar\PIL_10_5\labview project\PIHIL.dbc.
+              [warning] DBC attribute Manufacturer not defined.
+                    ==> Use Manufacturer='Vector' as attribute value.
+              [info] Writing System Description...
+              [info] Writing 2 ECU Extracts...
+              
+              C:\Users\user\AppData\Local\Temp\DaVinci\Cfg-9456193\LegacyConverterResults\1792149808614-0\ConvertedLegacy.arxml.
+              C:\Users\user\AppData\Local\Temp\DaVinci\Cfg-9456193\LegacyConverterResults\1792149808614-0\ConvertedLegacy_PXI.arxml.
+              C:\Users\user\AppData\Local\Temp\DaVinci\Cfg-9456193\LegacyConverterResults\1792149808614-0\ConvertedLegacy_S32K144.arxml.
+              Elapsed time: 0.658 seconds.
+              0 Errors.
+              1 Warnings.
+              [Warning] Legacy Converter finished with errors/warnings.
+ 19:23:29 - Action 'Converting legacy file(s) to AUTOSAR files' successfully finished with warnings.
+                 [Warning] Legacy Converter finished with errors/warnings.
+ 19:23:29 - Action 'Converting legacy file(s) to AUTOSAR files' successfully finished with warnings.
+                 [Warning] Legacy Converter finished with errors/warnings.
+19:23:29 - Workflow 'Input File Pre-Processing' finished.

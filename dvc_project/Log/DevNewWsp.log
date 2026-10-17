@@ -1,0 +1,15 @@
+﻿16 Oct 2026 13:56:08 - Saving file AdminDataTemplates.xml (D:\Autosar\dvc_project\Config\Developer\AdminDataTemplates.xml)
+16 Oct 2026 13:56:08 - Saving file s32k_dvc.dcf (D:\Autosar\dvc_project\Config\Developer\s32k_dvc.dcf)
+16 Oct 2026 13:56:08 - Start import
+16 Oct 2026 13:56:08 - Importing file (C:\Program Files (x86)\Vector DaVinci Developer 4.7\Bin\Predefines\StandardPackages_AR4.arxml).
+16 Oct 2026 13:56:10 - Importing file (C:\Program Files (x86)\Vector DaVinci Developer 4.7\Bin\Predefines\ServicePortInterfaces_4.3.1.arxml).
+16 Oct 2026 13:56:10 - Importing file (C:\Program Files (x86)\Vector DaVinci Developer 4.7\Bin\Predefines\ApplicationPortInterfaces_4.3.1.arxml).
+16 Oct 2026 13:56:10 - Importing file (D:\Autosar\dvc_project\Config\AUTOSAR\PlatformTypes_AR4.arxml).
+16 Oct 2026 13:56:10 - Merging imported data
+16 Oct 2026 13:56:11 - Finished import
+16 Oct 2026 13:56:11 - Saving file ProfileSettings.xml (D:\Autosar\dvc_project\Config\Developer\ProfileSettings.xml)
+16 Oct 2026 13:56:11 - Saving file Packages.arxml (D:\Autosar\dvc_project\Config\Developer\Packages.arxml)
+16 Oct 2026 13:56:11 - Saving file DataTypes.arxml (D:\Autosar\dvc_project\Config\Developer\DataTypes.arxml)
+16 Oct 2026 13:56:11 - Saving file PortInterfaces.arxml (D:\Autosar\dvc_project\Config\Developer\PortInterfaces.arxml)
+16 Oct 2026 13:56:11 - Saving file s32k_dvc.arxml (D:\Autosar\dvc_project\Config\Developer\ECUProjects\s32k_dvc.arxml)
+16 Oct 2026 13:56:11 - Saving file s32k_dvc.dcf (D:\Autosar\dvc_project\Config\Developer\s32k_dvc.dcf)

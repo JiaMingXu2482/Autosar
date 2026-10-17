@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="ECUC:181f65b6-f772-4dd7-b9a6-1186c4c7eba8">
+      <SHORT-NAME>TS_T40D2M10I1R0</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="e50e61f0-1ff9-4b57-89ba-32ad0d04bac3">
+          <SHORT-NAME>Gpt_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="0090c672-6bd1-4965-a237-d73dbafab88e">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="b4c8e7c6-2816-4feb-8823-f091329aa64e">
+                  <SHORT-NAME>Gpt</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="e2f70e05-807c-42d6-8994-c33a2afccdba">
+                      <SHORT-NAME>GptBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="0182f5f4-b030-46dc-aed3-5572c00e443b">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_00</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="24e5f2cd-6f91-46d7-87f1-0e3f4ae1d213">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_01</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="37d5afe0-1d30-470f-a49c-c1ba7d629d6c">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_02</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="2492c02e-3ea6-4e32-ae87-ac8bc90eace2">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_03</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="c457e31a-a1e2-476e-a7d9-8125110bdc92">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_04</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="ef634ecb-6b20-4df6-956e-8f412e7ea2b7">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_05</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="dcd2d69a-5a5c-41ee-9db2-625991c3b717">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_06</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="338dc311-96cc-418d-9d0f-e499a04b7316">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_07</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="ead9a45b-7c36-44ff-b0f9-f2c28b697714">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_08</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="f324b986-f682-43f5-82d0-0285acc5e356">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_09</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="1f9aa682-4b4e-4476-99aa-07780eb92c84">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_10</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="0fa500d8-b601-4f1f-a1c0-996d9325cb7d">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_11</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="98d986af-d9a0-4159-9208-c55641725c36">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_12</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="2510c195-5604-4102-ad6e-ca2d7f34e3a9">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_13</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="9d675646-4165-47d7-9dbb-4a8075f990e1">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_14</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="3b525a90-ab12-48cd-9a63-a4efb4b7585d">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_15</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="1fb82293-7e5e-4ad8-aecb-ec5208093e25">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_16</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="93792386-7d40-4f98-be40-8e7d658feaf2">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_17</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="713b6818-37da-4c21-a600-d4bd0f6ec7e6">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_18</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="e02d2b7b-858b-4bd3-9725-30372cb02429">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_19</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="53e1b33b-80cb-4e2e-be51-8653323efa90">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_20</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="aeff53c4-a21d-4502-bb00-73ebd021b4fb">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_21</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="2f3c3e68-8daf-436b-a495-b9834d5bfc05">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_22</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="9c69791c-2fd5-4409-a3df-5373fd67444d">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_23</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="6ee89904-be86-403a-9d6f-c8ab0bcdd6a1">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_24</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="9ed5c652-ef7e-4971-b95b-6285d349d9fa">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_25</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="fa039525-eb75-44a2-b12b-796f57a7de8b">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_26</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="4c342ca8-b323-42c5-b7c5-e196efc0d548">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_27</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="50e6d0da-59bb-4788-bfeb-a28f84136e2e">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_28</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="173fbfa8-a239-4a72-b596-4e7e768fbece">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_29</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="ed59a060-6cb9-4fad-bbba-d5e1c590149f">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_30</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="76553978-2332-4195-a049-d8e91751b475">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_31</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="900e6435-cc40-4808-a00f-8d50d01b24fe">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_32</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="b6dbb31e-67fb-4a76-bf4c-f39ce5815919">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_33</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="75f604fb-edb6-4a54-acf5-aafa3b3251db">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_34</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="f9212902-2a1f-4e37-99f5-de353fb27116">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_35</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="d0f462f3-dccd-429c-af72-16b23428d96d">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_36</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="df998a5f-11d5-45f1-9a9a-699d2c9299d1">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_37</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="c1527f71-01a7-4f63-83d4-6e15f68670b5">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_38</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="25420f20-1ee4-45a5-8196-54b9d6407506">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_39</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="d5a97304-19e2-46d6-842d-2bd2d9d50f0b">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_40</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="6518c471-2bae-4b7e-a784-89b337900fcc">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_41</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="b43cb6ad-35da-4596-9fbe-65f73f60a416">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_42</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="371e4056-145f-4e2c-be63-c3d7bb149198">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_43</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="63f76acb-f134-4731-9e23-5b41c853f125">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_44</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="07a54c03-def1-4d27-ac0f-fd5c054deb8e">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_45</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="fe8ad44a-b486-4a70-8f3c-9b10ae2921a4">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_46</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="9bac32ec-9914-4d62-a542-88e209a6b167">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_47</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="42d999ec-17ac-414f-8b81-79283b75e8e4">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_48</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="53016c3f-76a1-4385-be28-305cc743fd89">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_49</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="8b637e94-0a0d-459a-99c2-b237d569993d">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_50</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="6d1a94a9-9a1d-4e7e-9a49-b7f48d87bab4">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_51</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="57950888-80ab-42b5-b270-e0e0906d2a09">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_52</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="6abe43e9-9404-46d1-a8bf-753800fb1128">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_53</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="c47943a7-3daf-4fa5-b338-174c17b54311">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_54</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="5a90d692-4c29-4eb4-9e5c-5ef580faa4cb">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_55</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="0277bb5e-9d33-4871-b520-fab95379e453">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_56</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="8bd57ce0-6676-4c46-aa91-2c3114b39af4">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_57</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="c4477380-4f02-4762-8cf3-df77af7e2e06">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_58</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="8737faba-703d-4ee0-9535-d2e75707fcfb">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_59</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="0529b72c-2491-43b1-9e83-4e02e277e9d6">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_60</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="0d5de65d-b9e8-4e73-bd69-4ac71ab99a2e">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_61</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="44f6bd80-f417-45e3-966b-47c14529d022">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_62</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="30d5f40c-7624-4cc2-83a0-cde61455e901">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_63</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="e77e8d62-9990-4dad-ae1e-4a8f7024ab93">
+                          <SHORT-NAME>GPT_EXCLUSIVE_AREA_64</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
